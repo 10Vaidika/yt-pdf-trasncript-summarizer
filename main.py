@@ -1,5 +1,7 @@
 import sys
 
+from waitress import serve
+
 from flask import Flask, render_template, redirect, request, jsonify
 
 from youtube_transcript_api import YouTubeTranscriptApi, NoTranscriptFound, VideoUnavailable, TooManyRequests, TranscriptsDisabled, NoTranscriptAvailable
@@ -159,4 +161,4 @@ def pdf_text_try():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
