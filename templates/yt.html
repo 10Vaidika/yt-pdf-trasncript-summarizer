@@ -1,62 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <!-- Adding Roboto and Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400&display=swap"
-          rel="stylesheet">
-    <!--Add web.css to this HTML file.-->
-    <link rel="stylesheet" href="/static/web.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Add title to this HTML file.-->
-    <title>YouTube Transcript Summarizer | Home</title>
-
-    <link href="/static/favicon.png" rel="icon">
-
-    <meta content="Welcome to our project which summarizes transcript of an eligible YouTube Video. The video should have well formatted closed-captions to perform summarization."
-          name="description">
-    <meta name="keywords"
-          content="YouTube, Rishabh, Vaidika, Tanish, Project, Transcript, YouTube Transcript, YouTube Transcript Summarizer">
-    <meta name="author" content="Rishabh Singh Tomar, Vaidika Ranka, Tanish Jain">
-
-    <meta name="robots" content="index,follow"/>
-
-    <meta property='og:title' content="YouTube Summarizer Web | Home"/>
-    <meta property='og:image' content='/static/image_cover.png'/>
-    <meta property='og:description'
-          content="Welcome to our project which summarizes transcript of an eligible YouTube Video. The video should have well formatted closed-captions to perform summarization."/>
-    <!--meta property='og:url' content='https://ytsum.herokuapp.com/'/-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-<body>
-<!--YouTube Logo Fetching-->
-<div>
-    <img src="/static/yt_icon_rgb.svg" height="100" width="100" alt="YouTube Icon" class="img-thumbnail rounded mx-auto d-block">
-</div>
-<!--Titles-->
-<h1 style="font-weight: 300;">YouTube Transcript Summarizer</h1>
-<p style="font-family: 'Open Sans', sans-serif; font-weight: 100;" class="fst-italic text-center">Get Summarization Done<br>Directly within your
-    browser.</p>
-<!--Info Message to go to summarize or web endpoint-->
-<form method = "POST">
-    <label for="basic-url">YouTube Video URL</label>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" id="basic-url" name="url" aria-describedby="basic-addon3" placeholder = "URL">
-    </div>
-    <div class="col-md-12 text-center">
-        <button type="submit" class="btn btn-primary mx-auto" style="margin-bottom: 20px !important">Submit</button>
-    </div>
-</form>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-</script>
-</body>
-<!--Promotional Div-->
-<footer class="text-center text-lg-start bg-light text-muted">
-    <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
-        Made with &#10084;&#65039; in India.<br>By Tanish Jain, Vaidika Ranka, and Rishabh Singh Tomar
-    </div>
-</footer>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Home - Text &amp; Transcript Summarizer</title>
+        <meta property='og:image' content='/static/image_cover.png'/>
+        <link rel="stylesheet" href="/static/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-dark" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" style="color: rgb(255,43,29);">Text &amp; Transcript Summarizer</a>
+            </div>
+        </nav>
+        <header class="masthead" style="background: url(&quot;static/image_bg.jpg&quot;), var(--bs-red);">
+            <section class="vh-100 gradient-custom">
+                <div class="container py-5 h-100">
+                    <div class="row justify-content-center align-items-center h-100">
+                        <div class="col-12 col-lg-9 col-xl-7">
+                            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+                                <div class="card-body p-4 p-md-5">
+                                    <h3 class="mb-4 pb-2 pb-md-0 mb-md-5" style="color: black">YouTube Video Summarization</h3>
+                                    <form method="POST">
+                                        <div>
+                                            <div class="col-md mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="basic-url" name="url" class="form-control form-control-lg" aria-describedby="basic-addon3" placeholder = "URL"/>
+                                                    <label class="form-label" style="margin: 10px; color: black">Enter the URL</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4 pt">
+                                            <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+    </body>
 </html>
+
+<!--body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-light" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" style="color: rgb(255,43,29);">Text &amp; Transcript Summarizer</a>
+            </div>
+    </nav>
+    <div>
+        <img src="/static/yt_icon_rgb.svg" height="100" width="100" alt="YouTube Icon" class="img-thumbnail rounded mx-auto d-block">
+    </div>
+    <!--Titles-->
+    <!--h1 style="font-weight: 300;" class = "col-md-12 text-center">YouTube Transcript Summarizer</h1>
+    <div>
+        <form method="POST">
+            <input type="submit" name="submit_button" value="Transcript" class="btn btn-primary col-md-12 text-center" style="margin: 25px">
+            <input type="submit" name="submit_button" value="PDF" class="btn btn-primary col-md-12 text-center" style="margin: 25px">
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+    </body>
+    <!--Promotional Div-->
+    <!--footer class="text-center text-lg-start bg-light text-muted">
+        <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05);">
+            Made with &#10084;&#65039; in India.<br>By Tanish Jain, Vaidika Ranka, and Rishabh Singh Tomar
+        </div>
+    </footer>

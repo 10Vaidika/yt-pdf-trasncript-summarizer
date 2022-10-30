@@ -79,9 +79,9 @@ def get_yt_video_id(id):
 @app.route("/home", methods=["GET", "POST"])
 def index():
     if request.method == 'POST':
-        if request.form['submit_button'] == 'Transcript':
+        if request.form['submit_button'] == 'YT TRANSCRIPT SUMMARIZER':
             return redirect('yt')
-        elif request.form['submit_button'] == 'PDF':
+        elif request.form['submit_button'] == 'PDF SUMMARIZER':
             return redirect('pdf')
 
     return render_template("root.html")
@@ -161,4 +161,4 @@ def pdf_text_try():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080, debug=True)
